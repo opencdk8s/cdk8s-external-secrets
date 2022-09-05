@@ -14,6 +14,7 @@ const project = new cdk8s.ConstructLibraryCdk8s({
     moduleName: 'github.com/opencdk8s/cdk8s-external-secrets-go',
   },
   npmAccess: 'public',
+  mergify: false,
   keywords: ['cdk8s'],
 
   depsUpgrade: false,

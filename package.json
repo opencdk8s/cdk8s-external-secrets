@@ -1,8 +1,8 @@
 {
-  "name": "cdk8s-external-secrets",
+  "name": "@opencdk8s/cdk8s-external-secrets",
   "repository": {
     "type": "git",
-    "url": "https://github.com/aatman/cdk8s-external-secrets.git"
+    "url": "https://github.com/opencdk8s/cdk8s-external-secrets.git"
   },
   "scripts": {
     "build": "npx projen build",
@@ -16,16 +16,15 @@
     "eslint": "npx projen eslint",
     "package": "npx projen package",
     "package-all": "npx projen package-all",
+    "package:go": "npx projen package:go",
     "package:js": "npx projen package:js",
     "post-compile": "npx projen post-compile",
-    "post-upgrade": "npx projen post-upgrade",
     "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
     "test": "npx projen test",
     "test:update": "npx projen test:update",
     "test:watch": "npx projen test:watch",
     "unbump": "npx projen unbump",
-    "upgrade": "npx projen upgrade",
     "watch": "npx projen watch",
     "projen": "npx projen"
   },
@@ -39,8 +38,8 @@
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
     "@typescript-eslint/parser": "^5",
-    "cdk8s": "1.4.10",
-    "constructs": "3.3.196",
+    "cdk8s": "2.2.74",
+    "constructs": "10.0.5",
     "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
     "eslint-import-resolver-typescript": "^3.5.0",
@@ -52,21 +51,24 @@
     "jsii-docgen": "^7.0.76",
     "jsii-pacmak": "^1.67.0",
     "json-schema": "^0.4.0",
-    "npm-check-updates": "^15",
     "projen": "^0.61.42",
     "standard-version": "^9",
     "ts-jest": "^27",
     "typescript": "^4.8.2"
   },
   "peerDependencies": {
-    "cdk8s": "^1.4.10",
-    "constructs": "^3.3.196"
+    "cdk8s": "^2.2.74",
+    "constructs": "^10.0.5"
   },
   "keywords": [
-    "cdk"
+    "cdk",
+    "cdk8s"
   ],
   "main": "lib/index.js",
   "license": "Apache-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
   "version": "0.0.0",
   "jest": {
     "testMatch": [
@@ -109,10 +111,14 @@
     }
   },
   "types": "lib/index.d.ts",
-  "stability": "stable",
+  "stability": "experimental",
   "jsii": {
     "outdir": "dist",
-    "targets": {},
+    "targets": {
+      "go": {
+        "moduleName": "github.com/opencdk8s/cdk8s-external-secrets-go"
+      }
+    },
     "tsc": {
       "outDir": "lib",
       "rootDir": "src"

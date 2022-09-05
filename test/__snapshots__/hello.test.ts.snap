@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`hello 1`] = `
+Array [
+  Object {
+    "apiVersion": "external-secrets.io/v1beta1",
+    "kind": "SecretProviderClass",
+    "metadata": Object {
+      "name": "test",
+    },
+    "spec": Object {
+      "dataFrom": Array [
+        Object {
+          "extract": Object {
+            "key": "all-keys-example-secret",
+          },
+        },
+      ],
+      "refreshInterval": "1h",
+      "secretStoreRef": Object {
+        "kind": "SecretStore",
+        "name": "example",
+      },
+      "target": Object {
+        "creationPolicy": "Owner",
+        "name": "secret-to-be-created",
+      },
+    },
+  },
+]
+`;
