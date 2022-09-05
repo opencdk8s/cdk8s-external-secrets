@@ -4,7 +4,7 @@ exports[`hello 1`] = `
 Array [
   Object {
     "apiVersion": "external-secrets.io/v1beta1",
-    "kind": "SecretProviderClass",
+    "kind": "ExternalSecret",
     "metadata": Object {
       "name": "test",
     },

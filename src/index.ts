@@ -101,7 +101,7 @@ export interface ExternalSecretProps {
 export class ExternalSecretV1Beta1 extends ApiObject {
   public static readonly GVK: GroupVersionKind = {
     apiVersion: 'external-secrets.io/v1beta1',
-    kind: 'SecretProviderClass',
+    kind: 'ExternalSecret',
   };
   /**
    * @param props initialization props
